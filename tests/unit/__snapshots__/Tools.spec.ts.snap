@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tools should render correctly 1`] = `
+<div class="tools-container">
+  <div class="header">
+    <div class="header-logo">
+      <router-link to="/">
+        <div class="logo-link"><img style="width: 24px; height: 24px;">
+          <h2 class="logo-text"> CHOP </h2>
+        </div>
+      </router-link>
+    </div>
+    <div class="sign-in-out">
+      <router-link to="/login"><button class="sign-in-button">Sign In</button></router-link>
+    </div>
+  </div>
+  <div class="tools-content">
+    <router-link to="/shortener">
+      <div class="tools-items"><img style="width: 100px; height: 100px;">
+        <h3 class="tool-name"> URL Shortener </h3>
+      </div>
+    </router-link>
+    <router-link to="/qr-code">
+      <div class="tools-items"><img style="width: 100px; height: 100px;">
+        <h3 class="tool-name"> QR Code Generator </h3>
+      </div>
+    </router-link>
+  </div>
+</div>
+`;

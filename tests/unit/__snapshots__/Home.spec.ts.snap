@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LandingPage should render correctly 1`] = `
+<div class="landing-container">
+  <div class="header">
+    <div class="header-logo">
+      <router-link to="/">
+        <div class="logo-link"><img style="width: 24px; height: 24px;">
+          <h2 class="logo-text"> CHOP </h2>
+        </div>
+      </router-link>
+    </div>
+    <div class="sign-in-out">
+      <router-link to="/login"><button class="sign-in-button">Sign In</button></router-link>
+    </div>
+  </div>
+  <div class="landing-content">
+    <h1 class="landing-title"> This is <span class="green">CHOP</span></h1>
+    <p class="landing-text"> A URL shortener for the modern web. With one click, you can create <span class="green">short links</span> and <span class="green">QR Codes</span> that are easy to share on all social platforms. Come give it a try! </p>
+    <div class="landing-buttons">
+      <router-link to="/login"><button class="landing-button">Get Started</button></router-link>
+      <router-link to="/about"><button class="landing-button">Contact me</button></router-link>
+    </div>
+  </div>
+</div>
+`;

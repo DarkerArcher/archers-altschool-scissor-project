@@ -1,29 +1,4 @@
-# altschool-scissor
+# A URL Shortening and QR Code Generation Web Application
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Technologies Used
+This application was built with VueJS and TypeScript. Firebase was used to implement the user authentication process, and the APIs used to build the tools can be found at https://goqr.me/api/doc/ for the QR Code generator and https://shrtco.de/docs for the shortened link creator. Additionally, I implemented a feature to copy the generated short link to clipboard, and the tool can be found at https://github.com/JamieCurnow/vue-clipboard3.

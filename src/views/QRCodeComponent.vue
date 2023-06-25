@@ -8,6 +8,7 @@
                 <img :src="qrLink" id="qrImage">
             </div>
             <button @click="generateQR">Generate QR Code</button>
+            <router-link to='/shortener'><button class="redirect-button">Click here to go to the URL Shortener</button></router-link>
         </div>
     </div>
 </template>
@@ -88,6 +89,7 @@ export default defineComponent({
 }
 
 .qr-form button {
+    margin: 10px 0;
     padding: 12px 24px;
 
     width: 100%;
@@ -105,6 +107,20 @@ export default defineComponent({
 
     cursor: pointer;
 }
+
+/* .redirect-button {
+    padding: 12px 24px;
+    width: 392px;
+    height: 48px;
+
+    color: #fffffe;
+
+    background: #7f5af0;
+    border-radius: 100px;
+    border: none;
+
+    cursor: pointer;
+} */
 
 #imgBox {
     width: 200px;

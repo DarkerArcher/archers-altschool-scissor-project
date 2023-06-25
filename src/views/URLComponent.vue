@@ -48,6 +48,7 @@
                         <button @click="copyLink(link)" class="copy-btn">Copy</button>
                     </li>
                 </ul>
+                <router-link to='/qr-code'><button class="redirect-button">Click here to go to the QR Code generator</button></router-link>
             </div>
         </div>
     </div>
@@ -127,6 +128,7 @@ export default defineComponent({
 
 li.link-item {
     border: 2px solid #010101;
+    background: #2cb67d;
     border-radius: 10px;
     padding: 5px 10px;
     margin: 10px 0;
@@ -142,6 +144,22 @@ li.link-item {
     border: none;
 
     margin: 10px 0;
+    cursor: pointer;
+}
+
+.redirect-button {
+    padding: 12px 24px;
+    width: 392px;
+    height: 48px;
+
+    /* Primary/400 */
+
+    color: #fffffe;
+
+    background: #7f5af0;
+    border-radius: 100px;
+    border: none;
+
     cursor: pointer;
 }
 
@@ -230,6 +248,7 @@ li.link-item {
     background: #7f5af0;
     border-radius: 100px;
     border: none;
+    cursor: pointer;
 
     /* Inside auto layout */
 

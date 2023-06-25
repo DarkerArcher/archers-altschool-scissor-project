@@ -85,11 +85,9 @@ export default defineComponent({
             const auth = getAuth();
             createUserWithEmailAndPassword(auth, email.value, password.value)
                 .then((data) => {
-                    console.log("Successfully registered");
                     router.push('/');
                 })
                 .catch((error) => {
-                    console.log(error.code);
                     switch (error.message) {
                         case "auth/email-already-exists":
                             alert("This user already exists")
@@ -113,11 +111,10 @@ export default defineComponent({
             const provider = new GoogleAuthProvider();
             signInWithPopup(getAuth(), provider)
                 .then((result) => {
-                    console.log(result.user);
                     router.push('/analytics')
                 })
                 .catch((error) => {
-                    console.log(error)
+                    alert(error.message)
                 })
         }
         return {

@@ -82,25 +82,23 @@ export default defineComponent({
             const auth = getAuth();
             signInWithEmailAndPassword(auth, email.value, password.value)
                 .then((data) => {
-                    console.log("Successfully signed in");
                     router.push('/tools');
                 })
                 .catch((error) => {
-                    console.log(error.code);
-                   switch (error.code) {
-                    case 'auth/invalid-email':
-                        alert('Invalid email address');
-                        break;
-                    case 'auth/user-not-found':
-                        alert('User not found');
-                        break;
-                    case 'auth/wrong-password':
-                        alert('Wrong password');
-                        break;
-                    default:
-                        alert('An error occurred');
-                        break;
-                   }
+                    switch (error.code) {
+                        case 'auth/invalid-email':
+                            alert('Invalid email address');
+                            break;
+                        case 'auth/user-not-found':
+                            alert('User not found');
+                            break;
+                        case 'auth/wrong-password':
+                            alert('Wrong password');
+                            break;
+                        default:
+                            alert('An error occurred');
+                            break;
+                    }
                 })
         }
 
@@ -108,9 +106,10 @@ export default defineComponent({
             const provider = new GoogleAuthProvider();
             signInWithPopup(getAuth(), provider)
                 .then((result) => {
-                    console.log(result.user)
                     router.push('/tools')
-                })
+                }).catch((error) => {
+                    alert(error.message);
+                });
         }
 
         return {
@@ -137,6 +136,7 @@ export default defineComponent({
     height: 100vh;
     background: #16161a;
 }
+
 .login {
     display: flex;
     flex-direction: column;
@@ -349,6 +349,7 @@ input[type='submit'] {
     .flex-container {
         width: 100%;
     }
+
     .login {
         width: 90%;
     }

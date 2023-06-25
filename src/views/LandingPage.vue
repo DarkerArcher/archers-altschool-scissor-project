@@ -39,7 +39,6 @@ export default defineComponent({
                     isLoggedIn.value = false;
                 }
             })
-            console.log(isLoggedIn.value)
         })
 
         return {

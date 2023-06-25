@@ -80,7 +80,6 @@ export default defineComponent({
             try {
                 const response = await fetch('https://api.shrtco.de/v2/shorten?url=' + this.url);
                 const data = await response.json();
-                console.log(data);
                 this.links.push(data.result.full_short_link);
                 this.url = '';
             } catch (error) {
